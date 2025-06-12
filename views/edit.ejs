@@ -1,0 +1,32 @@
+<form action="/posts/<%= post.id %>" method="POST" class="mx-auto mb-5 p-4 bg-white rounded shadow" style="max-width: 500px;">
+  <div class="mb-3">
+    <input
+      type="text"
+      name="title"
+      class="form-control"
+      value="<%= post.title %>"
+      placeholder="Post Title"
+      required >
+<!-- required for user -->
+  </div>
+  <div class="mb-3">
+    <input
+      type="text"
+      name="author"
+      class="form-control"
+      value="<%= post.author %>"
+      placeholder="Your Name"
+      required >
+      <!-- required for user -->
+  </div>
+  <div class="mb-3">
+    <textarea
+      name="content"
+      class="form-control"
+      rows="5"
+      required>
+      <!-- required for user -->
+       <%= post.content %></textarea>
+  </div>
+  <button type="submit" class="btn btn-success w-100">Update Your Post</button>
+</form>
